@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header img {
+  height: 100px;
+  width: 100px;
+}
+
+.header { /* makes the entire page a header so that we can include the background image and apply the gradient */
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(12, 5, 4, 0.729), rgba(237, 85, 100, 0.3)),url(/recursos/banner.jpg); /*Linear gradient creates the blueish transparent effect on top of the image */
+  background-position: center; /*centers the image*/
+  background-size: cover;
+  position: relative
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 4%;
+  align-items: center;
+  max-height: 25px;
+}
+
+.text{
+  margin-top: 15%;
+  color: white;
+  text-align: center;
+  
+}
+
+.text h1 {
+  font-size: 62px;
+
+}
+
+.text p {
+  
+  font-size: 16px;
+  
+}
+
+.button {
+  display: inline-block; /*makes the button separate form the text */
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: #ed5564;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+}
+
+.nav-links ul li a{
+  text-decoration: none;
+  color: white; /*Color of the nav bar links */
+}
+
+.nav-links ul li::after { 
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: red;
+  display: block;
+  margin: auto; /* makes the line appear from the middle*/
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after { /*this and the previous class allows an orange line to appear when we hover over the menu items*/
+  width: 100%;
+}
+
+.nav-links ul li a:hover{
+  text-decoration: none;
+  color: #ed5564;
+}
+
